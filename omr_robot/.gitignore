@@ -1,0 +1,17 @@
+.DS_Store
+mustache/js/output/*
+!mustache/js/output/empty
+.*.swp
+*.orig
+*.log
+mustache/js/node_modules
+node_modules/
+*.*.swp
+_vendor
+api
+.DS_Store
+*.png
+*.html
+*.xml
+.*.swp
+settings.txt
