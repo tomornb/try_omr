@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140605 18:05:05.904" generator="Robot 2.8.4 (Python 2.7.6 on linux2)">
+<suite source="/home/tomornb/ext_git/try_omr/omr_robot/input_id_number.txt" id="s1" name="Input Id Number">
+<test id="s1-t1" name="Check When Input is null and lost focus,it will be popup error message.">
+<kw type="setup" name="Open Web Nationwide Registration">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOME_URL}</arg>
+</arguments>
+<msg timestamp="20140605 18:05:05.981" level="INFO">Opening browser 'firefox' to base url 'http://localhost:4444/html/try_check_id_number.html'</msg>
+<status status="PASS" endtime="20140605 18:05:08.988" starttime="20140605 18:05:05.981"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140605 18:05:08.993" starttime="20140605 18:05:08.988"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20140605 18:05:08.993" starttime="20140605 18:05:08.993"></status>
+</kw>
+<status status="PASS" endtime="20140605 18:05:08.994" starttime="20140605 18:05:05.981"></status>
+</kw>
+<kw type="kw" name="Enter Data">
+<doc></doc>
+<arguments>
+<arg>${id_number_correct}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>cardtype</arg>
+</arguments>
+<msg timestamp="20140605 18:05:08.995" level="INFO">Clicking element 'cardtype'.</msg>
+<status status="PASS" endtime="20140605 18:05:10.028" starttime="20140605 18:05:08.995"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>cardtype</arg>
+<arg>01</arg>
+</arguments>
+<msg timestamp="20140605 18:05:10.029" level="INFO">Typing text '01' into text field 'cardtype'</msg>
+<status status="PASS" endtime="20140605 18:05:11.497" starttime="20140605 18:05:10.028"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>identity_number</arg>
+</arguments>
+<msg timestamp="20140605 18:05:11.498" level="INFO">Clicking element 'identity_number'.</msg>
+<status status="PASS" endtime="20140605 18:05:12.294" starttime="20140605 18:05:11.498"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>identity_number</arg>
+<arg>${id_number}</arg>
+</arguments>
+<msg timestamp="20140605 18:05:12.295" level="INFO">Typing text '3119900012856' into text field 'identity_number'</msg>
+<status status="PASS" endtime="20140605 18:05:13.620" starttime="20140605 18:05:12.294"></status>
+</kw>
+<status status="PASS" endtime="20140605 18:05:13.621" starttime="20140605 18:05:08.994"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Textfield Value Should Be">
+<doc>Verifies the value in text field identified by `locator` is exactly `expected`.</doc>
+<arguments>
+<arg>identity_number</arg>
+<arg>3119900012856</arg>
+</arguments>
+<msg timestamp="20140605 18:05:14.543" level="INFO">Content of text field 'identity_number' is '3119900012856'.</msg>
+<status status="PASS" endtime="20140605 18:05:14.544" starttime="20140605 18:05:13.621"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140605 18:05:14.868" starttime="20140605 18:05:14.544"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140605 18:05:14.868" critical="yes" starttime="20140605 18:05:05.980"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140605 18:05:14.869" starttime="20140605 18:05:05.905"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Input Id Number">Input Id Number</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

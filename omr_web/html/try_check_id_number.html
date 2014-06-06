@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="static/css/todo.css">
+    </head>
+    <body ng-app="todoApp">
+        <form ng-controller="TodoController">
+            <div>
+                <label id="lb_subsciber_number" class="required">เบอร์โทร : </label>
+                <input type="text" id="txt_subscriber_number" placeholder="type subscriber number here">
+                <button id="button_chk_subscriber"type="button">
+										Chk Subscriber
+									</button>
+            </div>
+            <div> <label id="id_type" class="required"> vaชนิดบัตร : " {{ getType() }}"</label> </div>
+            <div> <label id="id_number" class="required"> หมายเลขบัตร : " {{ getName() }}"</label> </div>
+        </form>
+
+        <label id="Resulst" class="required">เบอร์โทร : </label>
+
+        <script src="static/js/lib/angular.min.js"></script>
+        <script src="static/js/todo.js"></script>
+    </body>
+</html>

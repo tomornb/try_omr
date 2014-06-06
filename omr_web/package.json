@@ -1,0 +1,11 @@
+{
+  "name": "omr_web",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "karma": "0.12.11",
+    "karma-chrome-launcher": "0.1.4",
+    "karma-firefox-launcher": "0.1.3",
+    "karma-jasmine": "0.1.5"
+  }
+}

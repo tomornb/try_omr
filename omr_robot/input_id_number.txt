@@ -1,0 +1,30 @@
+*** Settings ***
+Library         Selenium2Library
+Test Teardown  Close Browser
+Test Setup  Open Web Nationwide Registration
+
+*** Variables ***
+${HOME_URL}     http://localhost:4444/html/try_check_id_number.html
+${id_number_correct}    3119900012856
+${DELAY}    0.3
+
+*** Test Cases ***
+Check When Input is null and lost focus,it will be popup error message.
+  #Enter Data    ${EMPTY}
+  #Textfield Value Should Be   id_number   หมายเลขบัตร : " {{ getType() }}"
+  Enter Data    ${id_number_correct}
+  Textfield Value Should Be   identity_number   3119900012856
+
+*** Keywords ***
+Open Web Nationwide Registration
+		Open browser     ${HOME_URL}
+		Maximize Browser Window
+		Set Selenium Speed    ${DELAY}
+
+Enter Data
+	[Arguments]    ${id_number}
+  Click Element    cardtype
+	Input Text    cardtype      01
+	Click Element    identity_number
+	Input Text    identity_number      ${id_number}
+	#Click Element         navbar
